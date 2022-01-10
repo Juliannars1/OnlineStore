@@ -3,29 +3,27 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
 import { ContactComponent } from './contact/contact.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { BannerComponent } from './banner/banner.component';
-import { SwiperModule } from 'swiper/angular';
+
+
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { LayoutComponent } from './layout/layout.component';
+import { SharedModule } from './shared/shared.module';
+import { CoreModule } from './core/core.module';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     ProductsComponent,
     ContactComponent,
-    HeaderComponent,
-    FooterComponent,
-    BannerComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SwiperModule
+    SharedModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
